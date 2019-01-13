@@ -1,0 +1,131 @@
+/*This is responsible for displaying what is inside of the body*/
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    line-height: 100%;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 1.2em;
+    color: #333;
+}
+/*This determins what the navigation should look like*/
+.nav {
+    order: -1;
+    padding: 0.5em;
+    background:black;
+    
+  }
+  /*A footer wasn't required in my website, however it looks a bit more appealing with one.*/
+  .footer{
+    padding: 0.8em;
+    background:rgb(4, 78, 175);
+    text-align: center;
+    color:white;
+    text-shadow: 3px 3px 0px #2c3e50;
+    background:linear-gradient(#FFC300,#FF5733,#C70039);
+  }
+
+
+/*This gives the website the ability to work with other devices as it will stretch or shrink depending on how the user is viewing it*/
+  .wrapper{
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 auto;
+  }
+  /*This is the main area I should be using to write any information*/
+  .main{
+    padding: 1em;
+    text-align: center;
+    background: linear-gradient(#900C3F,#C70039,#FF5733,#FFC300);
+  }
+  /*This is the sidebar that is used in every page, can be used to place smaller texts or images in*/
+  .aside{
+    padding: 0.5em;
+    text-align: center;
+    background: linear-gradient(#900C3F,#C70039,#FF5733,#FFC300);
+  }
+  /*This changes the shape of videos automatically to give other device support*/
+  @media (max-width: 30em) {
+    .main{flex: 1 0 auto}
+  }
+  
+  @media (min-width: 30em) {
+    .nav{display: block;}
+    /*Flexbox to allow for device support*/
+    .wrapper{
+      flex-direction: row;
+    }
+    .main {
+      flex: 1 1 auto;
+    }
+  
+    .aside{
+      width: 20%;
+    }
+    
+  }
+/*Navigation needed some space between the line it starts on*/
+.nav {
+  margin: 50
+
+/*Determines how my lists should appear*/
+}
+ul {
+  overflow: auto;
+  list-style-type: none;
+  text-shadow: 3px 3px 0px #2c3e50;
+}
+/*Determines how my lists should appear*/
+.list1 li {
+  height:25px;
+  float:left;
+  margin-right:0px;
+  border:1px solid white;
+  padding: 0 20px;
+  
+}
+/*A slight change from other lists, comes with an animation*/
+.list1 li a {
+  text-decoration:none;
+  color:#ccc;
+  font:18px/1 Helventic, Verdana, sans-sherif;
+
+  transition: all 0.5s ease;
+/*determines that it is being hovered over*/
+}
+.list1 li a:hover{
+  color:#666;
+}
+.list1 li a:active a {
+  font-weight: bold;
+  color:#333;
+}
+/*used for displaying text*/
+.content{
+  width:200px;
+  height:150px;
+/*This colour was chosen as it allows the user to be able to see what is written on the background.*/
+}
+.home-text{
+  padding:10px;
+  text-shadow:none;
+  color:white;
+  margin: 0 0 0 -0.8125em;
+  position: absolute;
+  top: 150px;
+  margin: 0 0 3px 0;
+}
+.home-text li{
+  margin: 0 0 50px 0;
+}
+#about-aside .aside{
+width:0%;
+}
+
+/*Image adjust*/
+.egg{
+  height:150px;
+  width:140px ;
+}
